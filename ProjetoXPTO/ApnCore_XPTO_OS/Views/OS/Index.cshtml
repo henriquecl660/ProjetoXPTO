@@ -1,0 +1,79 @@
+﻿@model IEnumerable<ApnCore_XPTO_OS.Models.OS>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TITULO_SERV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CNPJ_CLI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NOME_CLI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CPF_PREST)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NOME_PREST)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DATA_SERV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VALOR_SERV)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TITULO_SERV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CNPJ_CLI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOME_CLI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPF_PREST)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOME_PREST)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DATA_SERV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VALOR_SERV)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.NUM_OS">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.NUM_OS">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.NUM_OS">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>
