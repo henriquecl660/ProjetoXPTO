@@ -64,7 +64,7 @@ namespace ApnCore_XPTO_OS
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=OS}/{action=Index}/{id?}");
             });
         }
     }

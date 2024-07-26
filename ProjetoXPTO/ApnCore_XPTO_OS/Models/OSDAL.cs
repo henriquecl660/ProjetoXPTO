@@ -10,7 +10,7 @@ namespace ApnCore_XPTO_OS.Models
     public class OSDAL : IOSDAL
     {
         
-        string connectionString = @"Data Source= DESKTOP-CAF3VOT\SQLSERVER;Initial Catalog= DBAtividade;Integrated Security=True;";
+        string connectionString = @"Data Source= DESKTOP-L92A5M8;Initial Catalog= DBAtividade;Integrated Security=True;";
 
 
         public IEnumerable<OS> GetAllOSs()

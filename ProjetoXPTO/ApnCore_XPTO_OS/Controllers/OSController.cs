@@ -56,10 +56,11 @@ namespace ApnCore_XPTO_OS.Controllers
             return View(os);
         }
 
-        // GET: OSController2/Create
+        [HttpGet]
         public IActionResult Create()
         {
-            return View();
+            OS os = ordem_serv.GetOS(-1);
+            return View(os);
         }
 
         // POST: OSController2/Create
